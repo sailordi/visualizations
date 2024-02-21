@@ -12,7 +12,7 @@ handle_libraries() {
     # Jupiter notebok: libraries="$2,notebook"
     libraries="$2,jupyterlab"
     file_name="requirements.txt"
-    requirements_path="$env_name/$file_name"
+    requirements_path="$file_name"
     
     if [ -n "$2" ]; then
         # Write libraries to requirements.txt
@@ -26,7 +26,7 @@ install_libraries() {
     python -m ensurepip
     python -m ensurepip --upgrade
     python -m pip install --upgrade pip
-    pip install -r "$env_name/requirements.txt"
+    pip install -r "requirements.txt"
     pip install ipykernel
     python -m ipykernel install --user --name="$env_name"
 }
