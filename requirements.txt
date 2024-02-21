@@ -1,6 +1,0 @@
-numpy
-pandas
-tabulate
-matplotlib
-plotly
-jupyterlab
